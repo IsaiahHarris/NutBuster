@@ -18,17 +18,55 @@ html {
 }
 
 #statusBar {
-  width: 40%;
-  height: 50px;
+  width: 50%;
+  height: 35px;
   position: absolute;
-  bottom: 0;
-  left: 30%;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -25%;
 
-  border-radius: 100px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#statusBar progress {
+  position: absolute;
+  left: 3%;
+
+  z-index: 0;
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 95%;
+  height: 30px;
+}
+
+progress::-webkit-progress-bar {
   background-color: #EF8354;
+  border: solid #ffdd4a 5px;
+  height: 30px;
+  border-radius: 100px;
+}
+
+progress::-webkit-progress-value {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffdd4a,
+    #ffdd4a 13px,
+    #EF8354 13px,
+    #EF8354 25px
+  );
+
+  background-color: white;
+  border: 0;
+  height: 20px;
+  border-radius: 100px;
 }
 
 .emoji {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
+  z-index: 1;
 }
